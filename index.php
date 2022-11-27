@@ -1,4 +1,4 @@
-<?php include_once './header.php'?>
+<?php include './header.php'?>
 <form class="container" method="POST" action="create.php">
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>

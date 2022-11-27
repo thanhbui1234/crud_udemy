@@ -17,6 +17,8 @@ if (isset($_POST['submit'])) {
         die('query field');
     }
 
+    // include './read.php';
+
     // if ($username && $password) {
     //     echo $username;
 
@@ -25,3 +27,5 @@ if (isset($_POST['submit'])) {
     // }
 
 }
+?>
+<a href="./read.php">Click read</a>

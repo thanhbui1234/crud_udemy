@@ -1,4 +1,4 @@
-<?php 
+<?php
 $connetion = mysqli_connect('localhost', 'root', '', 'loginapp');
 if ($connetion) {
     echo "conneted";
@@ -6,5 +6,3 @@ if ($connetion) {
 } else {
     die("Couldn't connect");
 }
-
-?>

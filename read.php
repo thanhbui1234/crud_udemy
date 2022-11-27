@@ -1,26 +1,46 @@
 <!-- Đọc dữ liệu từ database -->
-<?php include './connection.php';
-
-$query = 'SELECT * FROM users ';
-/// $result  sẽ nhận được tận cả những dữ liệu select từ user;
-$result = mysqli_query($connetion, $query);
-if (!$result) {
-    die('query field');
-}
-
-include_once 'header.php';
+<?php
+require './header.php';
+include './connection.php';
 ?>
 
 <div class="container">
     <div class="col-sm-6">
         <?php
-while ($row = mysqli_fetch_assoc($result)) {
-    echo '<pre>';
-    print_r($row);
-    echo '</pre>';
+$query = 'SELECT * FROM users ';
 
-}
-?>
+$result = mysqli_query($connetion, $query);
+
+while ($row = mysqli_fetch_assoc($result)) {
+
+    $url = '/edit.php?id=' . $row['id'] . '&username=' . $row['username'] . '&password=' . $row['password'];
+    ?>
+        <table class="table mt-3">
+            <thead>
+                <tr class="table-dark">
+                    <th scope=" col">#</th>
+                    <th scope="col">USERNAME</th>
+                    <th scope="col">PASSWORD</th>
+                    <th scope="col">FUNCTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><?php echo $row['id']; ?></th>
+                    <td><?php echo $row['username']; ?></td>
+                    <td><?php echo $row['password']; ?></td>
+                    <td>
+                        <a href="<?php echo $url ?>"><button type="button" class="btn btn-primary">Sua</button></a>
+                        <button type="button" class="btn btn-secondary">Xoa</button>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+        <?php }?>
+
 
     </div>
 </div>
