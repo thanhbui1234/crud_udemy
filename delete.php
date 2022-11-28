@@ -10,6 +10,7 @@ if (isset($_POST['submit'])) {
 ?>
 <form class="container" action="" method="POST">
 
+    <h1 class="text-center">DELETE</h1>
 
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -29,7 +30,7 @@ showAllData()
 ?>
         </select>
     </div>
-    <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" name="submit" value="submit" class="btn btn-primary">DELETE :D</button>
 </form>
 <?php
 include './footer.php';

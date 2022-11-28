@@ -8,6 +8,10 @@ function crerate()
     $username = $_POST['email'];
     $password = $_POST['password'];
 
+    //  sẽ cho phép sử dụng các ký tự đặc biệt  ;  '  .'  lưu vào database
+    $username = mysqli_real_escape_string($connetion, $username);
+    $password = mysqli_real_escape_string($connetion, $password);
+
 // $connetion = mysqli_connect('localhost', 'root', '', 'loginapp');
 // include './connection.php';
 
