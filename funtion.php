@@ -12,6 +12,13 @@ function crerate()
     $username = mysqli_real_escape_string($connetion, $username);
     $password = mysqli_real_escape_string($connetion, $password);
 
+    // encryption password
+    $hashFormat = "$2y$10$";
+    $salt = "tthahahahttttt123ktrkk";
+    $hatl_ant__salt = $hashFormat . $salt;
+    $password = crypt($password, $hatl_ant__salt);
+    echo $password;
+
 // $connetion = mysqli_connect('localhost', 'root', '', 'loginapp');
 // include './connection.php';
 
