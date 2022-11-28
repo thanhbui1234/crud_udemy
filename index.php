@@ -1,5 +1,15 @@
 <?php include './header.php'?>
-<form class="container" method="POST" action="create.php">
+<?php
+if (isset($_POST['submit'])) {
+    include './funtion.php';
+    crerate();
+
+}
+?>
+
+
+<form class="container" method="POST" action="">
+    <h1 class="text-center">CREATE</h1>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -10,7 +20,7 @@
         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
     </div>
 
-    <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" name="submit" value="submit" class="btn btn-primary">CREAT</button>
 </form>
 
 <?php include './footer.php'?>

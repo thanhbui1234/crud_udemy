@@ -5,7 +5,7 @@ include './funtion.php';
 <?php
 if (isset($_POST['submit'])) {
 
-    update();
+    delete();
 }
 ?>
 <form class="container" action="" method="POST">
