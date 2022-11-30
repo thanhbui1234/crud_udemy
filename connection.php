@@ -1,5 +1,5 @@
 <?php
-$connetion = mysqli_connect('localhost', 'root', '', 'loginapp');
+$connetion = mysqli_connect('localhost', 'root', '', 'loginapp');  // tham số thứ tư là tên database tạo trên myadmin
 if ($connetion) {
     echo "conneted";
     echo "<br>";
