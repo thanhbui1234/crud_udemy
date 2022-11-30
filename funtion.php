@@ -29,7 +29,7 @@ function crerate()
     if (!$result) {
         die('query field');
     }
-    echo '<a href="./read.php">Click read</a>';
+    header('location: ./read.php ');
 }
 
 function showAllData()

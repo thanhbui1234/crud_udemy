@@ -13,7 +13,7 @@ $result = mysqli_query($connetion, $query);
 
 while ($row = mysqli_fetch_assoc($result)) {
 
-    $url = '/edit.php?id=' . $row['id'] . '&username=' . $row['username'] . '&password=' . $row['password'];
+    $url = '/update.php?id=' . $row['id'] . '&username=' . $row['username'] . '&password=' . $row['password'];
     ?>
         <table class="table mt-3">
             <thead>
@@ -31,7 +31,10 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <td><?php echo $row['password']; ?></td>
                     <td>
                         <a href="<?php echo $url ?>"><button type="button" class="btn btn-primary">Sua</button></a>
-                        <button type="button" class="btn btn-secondary">Xoa</button>
+
+
+
+                        <a href="/delete.php"> <button type="button" class="btn btn-secondary">Xoa</button></a>
                     </td>
 
                 </tr>
