@@ -6,7 +6,7 @@ include './funtion.php';
 if (isset($_POST['submit'])) {
 
     update();
-}
+}   
 ?>
 <form class="container" action="" method="POST">
 

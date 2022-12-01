@@ -2,7 +2,7 @@
 <?php
 if (isset($_POST['submit'])) {
     include './funtion.php';
-    crerate();
+    crerate();  
 
 }
 ?>
